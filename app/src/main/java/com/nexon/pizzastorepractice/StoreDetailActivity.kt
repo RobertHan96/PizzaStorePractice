@@ -2,8 +2,10 @@ package com.nexon.pizzastorepractice
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nexon.pizzastorepractice.datas.Store
 
 class StoreDetailActivity : BaseActivity() {
+    private lateinit var storeData : Store
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -13,11 +15,11 @@ class StoreDetailActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun setValues() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        storeData = intent.getSerializableExtra("storeData") as Store
+
     }
 
 }

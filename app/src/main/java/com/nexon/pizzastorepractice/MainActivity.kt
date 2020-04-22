@@ -28,8 +28,10 @@ class MainActivity : BaseActivity() {
     override fun setupEvents() {
         storeListView.setOnItemClickListener { parent, view, position, id ->
             val myIntent = Intent(mContext, StoreDetailActivity::class.java)
-            myIntent.putExtra("이름표", )
+            val clickedStoreData = storeList.get(position)
+            myIntent.putExtra("storeData", clickedStoreData)
             startActivity(myIntent)
+
         }
     }
 
