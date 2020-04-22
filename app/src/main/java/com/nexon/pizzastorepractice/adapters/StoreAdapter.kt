@@ -35,7 +35,7 @@ class StoreAdapter (context : Context, resID:Int, list:ArrayList<Store>)  : Arra
         Glide.with(mContext).load(data.logoUrl).into(storeLogoImg)
 
         return  row
-
     }
+
 
 }
